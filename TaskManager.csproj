@@ -16,9 +16,22 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="database\" />
-      <Folder Include="models\" />
       <Folder Include="services\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Migrations\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Migrations\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Migrations\**" />
+      <None Update="database\TaskManager.db">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>
