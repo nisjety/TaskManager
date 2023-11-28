@@ -16,11 +16,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="services\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Compile Remove="Migrations\**" />
+      <Compile Remove="database\databaseManager.cs" />
     </ItemGroup>
 
     <ItemGroup>
