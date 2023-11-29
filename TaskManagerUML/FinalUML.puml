@@ -1,0 +1,115 @@
+@startuml
+' Define the styling for the UML diagram
+skinparam DefaultFontName Arial
+skinparam DefaultFontStyle regular
+skinparam ClassFontStyle bold
+skinparam Linetype straight
+
+class Program {
+    + static void Main(String[] args)
+    + static void DisplayMainMenu()
+    + static int GetUserChoice()
+    + static void PerformLogin()
+    + static void PerformRegistration()
+}
+
+class User {
+    - int userId
+    - String username
+    - String password
+    - String email
+    + void login()
+    + void logout()
+}
+
+Program -- "1" User : uses >
+
+interface IUserManagement {
+    + bool LoginHandler()
+    + bool RegisterHandler()
+}
+
+interface IUTaskManagement {
+    + void ViewAllTasksForUser(int userId)
+    + void DeleteUserTaskById(int userId)
+    + void CreateUserTask(int userId, string title, string note, DateTime dueDate)
+}
+
+class LoginManager implements IUserManagement {
+    + bool LoginHandler()
+}
+
+class RegistrationManager implements IUserManagement {
+    + bool RegisterHandler()
+}
+
+User "1" -- "1" IUserManagement : interacts through >
+
+class UTask {
+    - int uTaskId
+    - int userId
+    - String title
+    - String note
+    - DateTime dueDate
+    + void updateUTaskDetails(String title, String note, DateTime dueDate)
+}
+
+class UTaskManager implements IUTaskManagement {
+    + void ViewAllTasksForUser(int userId)
+    + void DeleteUserTaskById(int userId)
+    + void CreateUserTask(int userId, string title, string note, DateTime dueDate)
+}
+
+UTaskManager "1" -- "*" UTask : manages >
+User "1" -- "1" UTaskManager : uses >
+
+interface IDataManagement {
+    + void CreateUser(User user)
+    + void CreateUTask(UTask uTask)
+    + void DeleteUTask(int uTaskId)
+}
+
+class SQLiteDatabaseManager implements IDataManagement {
+    + void CreateUser(User user)
+    + void CreateUTask(UTask uTask)
+    + void DeleteUTask(int uTaskId)
+    + List<User> GetAllUsers()
+    + List<UTask> GetUTasksForUser(int userId)
+}
+
+class InputValidator {
+    + static bool IsValidUsername(String username)
+    + static bool IsValidPassword(String password)
+    + static bool IsValidEmail(String email)
+    + static bool IsValidDate(String date, out DateTime parsedDate)
+}
+
+LoginManager -- "uses" InputValidator : validates inputs >
+RegistrationManager -- "uses" InputValidator : validates inputs >
+UTaskManager -- "uses" InputValidator : validates inputs >
+
+SQLiteDatabaseManager ..|> IDataManagement
+
+User "1" -- "*" UTask : has >
+LoginManager -- "uses" SQLiteDatabaseManager : interacts with >
+RegistrationManager -- "uses" SQLiteDatabaseManager : interacts with >
+Program -- "uses" LoginManager : directs to >
+Program -- "uses" RegistrationManager : directs to >
+
+class DateTimeUtility {
+    + static DateTime GetCurrentDateTime()
+}
+
+UTask -- "uses" DateTimeUtility : uses >
+
+class UTaskProgram {
+    + static void DisplayUserMenu(int userId)
+    + static void AddNewTask(int userId, UTaskManager taskManager)
+    + static void DeleteTask(int userId, UTaskManager taskManager)
+}
+
+Program -- "1" UTaskProgram : uses >
+LoginManager -- "1" UTaskProgram : redirects to >
+UTaskProgram -- "1" UTaskManager : uses >
+
+@enduml

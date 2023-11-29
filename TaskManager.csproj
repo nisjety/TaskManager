@@ -18,6 +18,12 @@
     <ItemGroup>
       <Compile Remove="Migrations\**" />
       <Compile Remove="database\databaseManager.cs" />
+      <Compile Update="TaskManagerTests\Program.cs">
+        <Link>TaskManagerTest\Program.cs</Link>
+      </Compile>
+      <Compile Update="TaskManagerTests\modelsTest\UserTests.cs">
+        <Link>TaskManagerTest\modelsTest\UserTests.cs</Link>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

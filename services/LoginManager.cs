@@ -1,41 +1,65 @@
-using TaskManager.models;
 using TaskManager.database;
 using TaskManager.utilities;
 
-
-namespace TaskManager.services;
-
-public class LoginManager
+namespace TaskManager.services
 {
-    private readonly SQLiteDatabaseManager _dbManager;
-
-    public LoginManager(SQLiteDatabaseManager dbManager)
+    // Manages user login process, interfacing with database and authentication services.
+    public class LoginManager
     {
-        _dbManager = dbManager ?? throw new ArgumentNullException(nameof(dbManager));
-    }
+        private readonly SQLiteDatabaseManager _dbManager;
+        private readonly AuthenticationService _authService;
 
-    // Handles the login process
-    public bool LoginHandler(string username, string password)
-    {
-        try
+        // Initializes a new instance of LoginManager with required dependencies.
+        public LoginManager(SQLiteDatabaseManager dbManager)
         {
-            var user = _dbManager.GetUserByUsername(username);
-
-            if (user != null && AuthenticationService.PasswordHasher.VerifyPassword(password, user.Password))
-            {
-                Console.WriteLine("Login successful.");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("Login failed. Username or password is incorrect.");
-                return false;
-            }
+            _dbManager = dbManager ?? throw new ArgumentNullException(nameof(dbManager));
+            _authService = new AuthenticationService(dbManager);
         }
-        catch (Exception ex)
+
+        // Handles the process of user login including input validation and authentication.
+        public int LoginHandler()
         {
-            Console.WriteLine($"An error occurred: {ex.Message}");
-            return false;
+            Console.WriteLine("Please enter your username:");
+            var username = Console.ReadLine();
+            
+            // Validates that the username is not null or empty.
+            if (username == null)
+            {
+                Console.WriteLine("Username cannot be empty.");
+                return -1;
+            }
+
+            Console.WriteLine("Please enter your password:");
+            var password = Console.ReadLine();
+
+            // Validates that the password is not null or empty.
+            if (password == null)
+            {
+                Console.WriteLine("Password cannot be empty.");
+                return -1;
+            }
+
+            try
+            {
+                // Authenticates the user against stored credentials.
+                var user = _dbManager.GetUserByUsername(username);
+
+                if (_authService.VerifyLogin(username, password))
+                {
+                    Console.WriteLine("Login successful.");
+                    return user.UserId; // Returns the authenticated user's ID.
+                }
+                else
+                {
+                    Console.WriteLine("Login failed. Username or password is incorrect.");
+                    return -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return -1; // Indicates failure due to an exception.
+            }
         }
     }
 }

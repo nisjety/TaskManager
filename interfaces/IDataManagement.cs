@@ -1,4 +1,4 @@
-namespace TaskManager.models.interfaces;
+namespace TaskManager.interfaces;
 
 public interface IDataManagement
 {

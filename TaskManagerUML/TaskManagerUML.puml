@@ -1,0 +1,98 @@
+@startuml
+' Define the styling for the UML diagram
+skinparam DefaultFontName Arial
+skinparam DefaultFontStyle regular
+skinparam ClassFontStyle bold
+skinparam Linetype straight
+
+class Program {
+    + static void Program(String[] args)
+    + static void DisplayMenu()
+    + static int GetUserChoice()
+}
+
+class User {
+    - int userId
+    - String username
+    - String password
+    - String email
+    + void login()
+    + void logout()
+}
+
+Program -- "1" User : uses >
+
+interface IUserManagement {
+    + void handleLogin()
+    + void handleRegistration()
+}
+
+interface IUTaskManagement {
+    + List<UTask> viewAllTasksForUser(int userId)
+    + void deleteUTaskById(int uTaskId)
+    + void addTask(UTask uTask)
+}
+
+class LoginManager implements IUserManagement {
+    + void handleLogin()
+}
+
+class RegistrationManager implements IUserManagement {
+    + void handleRegistration()
+}
+
+User "1" -- "1" IUserManagement : interacts through >
+
+class UTask {
+    - int uTaskId
+    - int userId
+    - String title
+    - String note
+    - DateTime dueDate
+    + void updateUTaskDetails(String title, String description, DateTime dueDate)
+}
+
+class UTaskManager implements IUTaskManagement {
+    + List<UTask> viewAllUTasksForUser(int userId)
+    + void deleteUTaskById(int uTaskId)
+    + void addUTask(UTask uTask)
+}
+
+UTaskManager "1" -- "*" UTask : manages >
+User "1" -- "1" UTaskManager : uses >
+
+interface IDataManagement {
+    + void createUser(User user)
+    + void createUTask(UTask uTask)
+    + void deleteUTask(int uTaskId)
+}
+
+class SQLiteDatabaseManager implements IDataManagement {
+    + void createUser(User user)
+    + void createUTask(UTask uTask)
+    + void deleteUTask(int uTaskId)
+    + List<User> getAllUsers()
+    + List<UTask> getUTasksForUser(int userId)
+}
+
+class InputValidator {
+    + static bool validateInput(String input)
+}
+
+LoginManager -- "uses" InputValidator : validates inputs >
+RegistrationManager -- "uses" InputValidator : validates inputs >
+UTaskManager -- "uses" InputValidator : validates inputs >
+
+SQLiteDatabaseManager ..|> IDataManagement
+
+User "1" -- "*" UTask : has >
+LoginManager -- "uses" SQLiteDatabaseManager : interacts with >
+RegistrationManager -- "uses" SQLiteDatabaseManager : interacts with >
+
+class DateTimeUtility {
+    + static DateTime getCurrentDateTime()
+}
+
+UTask -- "uses" DateTimeUtility : uses >
+
+@enduml
