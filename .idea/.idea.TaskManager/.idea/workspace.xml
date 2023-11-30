@@ -10,36 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df338bee-a45d-4472-a2ce-5ecf77dfd567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TaskManagerTests/testModels/InputValidatorTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskManagerTests/testModels/UTaskTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TaskManagerTests/testModels/UserTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TaskManager.sln" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TaskManager/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaskManager.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManager.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/TaskManagerTest.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/Debug/net7.0/TaskManagerTest.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/Debug/net7.0/TaskManagerTest.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/Debug/net7.0/TaskManagerTest.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/Debug/net7.0/TaskManagerTest.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/Debug/net7.0/TaskManagerTest.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/TaskManagerTest.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/TaskManagerTest.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/TaskManagerTest.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskManagerTest/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManager.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManagerTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManagerTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManagerTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManagerTests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTests/obj/Debug/net7.0/TaskManagerTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTests/obj/Debug/net7.0/TaskManagerTests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTests/obj/Debug/net7.0/TaskManagerTests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTests/obj/Debug/net7.0/TaskManagerTests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskManagerTests/obj/Debug/net7.0/TaskManagerTests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaskManagerTests/obj/Debug/net7.0/TaskManagerTests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UTaskProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UTaskProgram.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/TaskManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/TaskManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/TaskManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/TaskManager.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/SQLiteDatabaseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/database/SQLiteDatabaseManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/IDataManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/IDataManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/TaskManager.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ref/TaskManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ref/TaskManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/refint/TaskManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/refint/TaskManager.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/LoginManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/LoginManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/RegistrationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/RegistrationManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/UTaskManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/UTaskManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utilities/AuthenticationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/AuthenticationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/InputValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/InputValidator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,33 +73,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Sequence",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "RiderNuGetOptionsPageId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderNuGetOptionsPageId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/imadacosta/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/Users/imadacosta/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/Users/imadacosta/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/imadacosta/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/imadacosta/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/imadacosta/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RiderProblemsViewState">
     <option name="showPreview" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.TaskManagerTest">
+  <component name="RunManager" selected=".NET Project.TaskManager">
     <configuration name="TaskManager" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/TaskManagerTests/bin/Debug/net7.0/TaskManagerTests" />
       <option name="PROGRAM_PARAMETERS" value="" />

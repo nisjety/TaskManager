@@ -1,4 +1,3 @@
-/*
 //eksempel from: https://juldhais.net/secure-way-to-store-passwords-in-database-using-sha256-asp-net-core-898128d1c4ef
 using System.Security.Cryptography; // added for password hashing.
 using System.Text;
@@ -51,6 +50,5 @@ namespace TaskManager.utilities
         }
     }
 }
-*/
 
 

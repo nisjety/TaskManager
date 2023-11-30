@@ -1,4 +1,3 @@
-/*
 using TaskManager.database;
 using TaskManager.utilities;
 using TaskManager.services;
@@ -55,10 +54,11 @@ namespace TaskManager
         private void ViewAllTasksForUser(int userId)
         {
             var uTasks = _dbManager.GetUserTasksForUser(userId);
-            if (uTasks.Any())
+            var enumerable = uTasks as Task[] ?? uTasks.ToArray();
+            if (enumerable.Any())
             {
                 Console.WriteLine("\nYour tasks:");
-                foreach (var uTask in uTasks)
+                foreach (var uTask in enumerable)
                 {
                     Console.WriteLine("Task ID: " + uTask.Id + ", Title: " + uTask.Title + ", Due Date: " + uTask.DueDate.ToShortDateString());                }
             }
@@ -83,4 +83,3 @@ namespace TaskManager
         }
     }
 }
-*/

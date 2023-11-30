@@ -30,7 +30,7 @@ namespace TaskManager.utilities
         }
 
         // Validates a task title to make sure it's not empty and does not exceed a certain length of 10 char.
-        public static bool IsValidTitle(string title)
+        public bool IsValidTitle(string title)
         {
             return !string.IsNullOrWhiteSpace(title) && title.Length <= 10; //  limit
         }
@@ -42,7 +42,7 @@ namespace TaskManager.utilities
         }
 
         // Validates a date string, make sure it's a valid date and is set in the future.
-        public static bool IsValidDate(string dateString, out DateTime dueDate)
+        public bool IsValidDate(string dateString, out DateTime dueDate)
         {
             return DateTime.TryParse(dateString, out dueDate) && dueDate > DateTime.Now;
         }
